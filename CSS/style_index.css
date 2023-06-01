@@ -1,0 +1,71 @@
+body {
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 400px; /* Largura fixa */
+    height: 600px; /* Altura fixa */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: auto; /* Caso o conteúdo seja maior que o container, ele irá rolar */
+}
+
+
+.form-group {
+    margin-bottom: 10px;
+    display: grid;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    width: 100%; /* Alteração: Ocupa toda a largura disponível */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    flex-grow: 1; /* Alteração: Expande e preenche o espaço restante */
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    background-color: inherit;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-bottom: 2px solid #4CAF50; /* Alteração: Destaque visual */
+}
+input[type="date"] {
+    background-color: inherit;
+    border: none; /* Remove a borda */
+    appearance: none; /* Remove a aparência padrão do input */
+}
+input[type="submit"]:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: black;
+}

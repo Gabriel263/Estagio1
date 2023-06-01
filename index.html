@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="./CSS/style_index.css">
+    <script src="./JS/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form action="PHP/cadastrar.php" method="post">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value="exemplo@exemplo.com" onclick="limparValor()" required>
+                <p id="erro-email-existente" style="display: none; color: red;">O email já está sendo usado. Por favor, use um email diferente.</p>
+                <p id="erro-email-invalido" style="display: none; color: red;">Por favor, insira um email válido.</p>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" onkeyup="passwordStrength()" required>
+                <p id="password-strength"></p>
+            </div>
+            <div class="form-group">
+                <label for="confirma-senha">Confirme a Senha:</label>
+                <input type="password" name="confirma-senha" id="confirma-senha" required>
+            </div>
+            <div class="form-group">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" name="data-nascimento" id="data-nascimento" required>
+            </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <select name="sexo" id="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </div>
+            <input type="submit" value="Cadastrar">
+        </form>
+
+    </div>
+</body>
+</html>
