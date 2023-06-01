@@ -93,6 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } catch (PDOException $e) {
         echo "Erro ao cadastrar o usuário: " . $e->getMessage();
+        exit();
     }
 }
 ?>
