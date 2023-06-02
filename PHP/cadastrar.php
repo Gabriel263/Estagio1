@@ -87,7 +87,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO usuarios (nome_completo, email, senha_hash, data_nascimento, sexo, imagem, tipo_imagem) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conexao->prepare($sql);
         $stmt->execute([$nome, $email, $senhaHash, $dataNascimento, $sexo, $imagem, $tipoImagem]);
-
         // Cadastro bem-sucedido, redireciona para a página de sucesso
         header("Location: ../login.html");
         exit();

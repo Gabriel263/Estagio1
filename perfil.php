@@ -41,6 +41,7 @@ if (!isset($_SESSION["usuario"])) {
         <p><?php echo $_SESSION["usuario"]["email"]; ?></p>
         <p><strong>Nascimento:</strong> <?php echo $_SESSION["usuario"]["data_nascimento"]; ?></p>
         <p><strong>Sexo:</strong> <?php echo $_SESSION["usuario"]["sexo"]; ?></p>
+        <a href="/PHP/logout.php" class="logout-link">Logout</a>
     </div>
     <script src="JS/perfil.js"></script>
 </body>
