@@ -20,7 +20,9 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  25px 25px 58px #777777,
+                -25px -25px 58px #ffffff;
 }
 
 .container h2 {
@@ -63,3 +65,11 @@ body {
 .file-input {
     display: none;
 }
+
+.logout-button {
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin-right: 10px;
+  }
+  
