@@ -1,5 +1,5 @@
 <?php
-    // Encerra a sessão
+    // Encerra a sessão ok
     session_destroy();
 
     // Redireciona para a página de login
