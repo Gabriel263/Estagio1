@@ -1,5 +1,5 @@
 <?php
-include('session_manager.php');
+include_once('session_manager.php');
 startUserSession();
 
 if (!isset($_SESSION["usuario"])) {

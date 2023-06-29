@@ -1,5 +1,5 @@
 <?php
-include('session_manager.php');
+include_once('session_manager.php');
 // Dados de conexão com o banco de dados
 $dbFile = '/tmp/clientes.db';
 
