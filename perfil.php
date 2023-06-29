@@ -1,5 +1,6 @@
 <?php
-session_start();
+include('PHP/session_manager.php');
+startUserSession();
 
 // Include the file with the function saveImageInDatabase
 include('PHP/upload_img.php');
@@ -41,7 +42,7 @@ if (!isset($_SESSION["usuario"])) {
         <p><?php echo $_SESSION["usuario"]["email"]; ?></p>
         <p><strong>Nascimento:</strong> <?php echo $_SESSION["usuario"]["data_nascimento"]; ?></p>
         <p><strong>Sexo:</strong> <?php echo $_SESSION["usuario"]["sexo"]; ?></p>
-        <button onclick="window.location.href='/PHP/logOut.php'" class="logout-button"><img src="IMAGENS/botao-de-logout-delineado.png" alt="Logout"></button>
+        <button onclick="window.location.href='/PHP/session_manager.php?logout=true'" class="logout-button"><img src="IMAGENS/botao-de-logout-delineado.png" alt="Logout"></button>
     </div>
     <script src="JS/perfil.js"></script>
 </body>

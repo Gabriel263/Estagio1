@@ -1,5 +1,6 @@
 <?php
-session_start();
+include('session_manager.php');
+startUserSession();
 
 if (!isset($_SESSION["usuario"])) {
     echo "Você precisa estar logado para fazer o upload da imagem.";

@@ -1,5 +1,6 @@
 <?php
-session_start();
+include('session_manager.php');
+startUserSession();
 
 // Verifique se o usuário está logado
 if (!isset($_SESSION["usuario"])) {

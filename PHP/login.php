@@ -1,4 +1,5 @@
 <?php
+include('session_manager.php');
 // Dados de conexão com o banco de dados
 $dbFile = '/tmp/clientes.db';
 
@@ -32,8 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verifica se a senha fornecida corresponde ao hash armazenado no banco de dados
             if (password_verify($senha, $result["senha_hash"])) {
                 // Inicia uma nova sessão e armazena as informações do usuário na sessão
-                session_start();
-                $_SESSION["usuario"] = $result;
+                loginUser($result);
 
                 // Redireciona para a nova página
                 header("Location: ../perfil.php");
